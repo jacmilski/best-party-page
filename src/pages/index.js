@@ -1,9 +1,12 @@
-import * as React from "react"
-import Seo from "../components/atoms/seo/seo"
+import * as React from "react";
+import Seo from "../components/atoms/seo/seo";
+import GlobalStyle from "../styles/GlobalStyles";
+
 
 const IndexPage = () => {
   return (
     <main>
+      <GlobalStyle />
       <h1>
         Strona główna
       </h1>
