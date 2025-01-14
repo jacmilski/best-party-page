@@ -1,4 +1,5 @@
 import * as React from "react"
+import Seo from "../components/atoms/seo/seo"
 
 const IndexPage = () => {
   return (
@@ -12,4 +13,6 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => (
+  <Seo title="Strona główna" description={'Strona główna'} pathname={'/'} children={undefined} />
+)
