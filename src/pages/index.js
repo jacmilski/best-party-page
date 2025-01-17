@@ -4,6 +4,7 @@ import Seo from "../components/atoms/seo/seo";
 import GlobalStyle from "../styles/GlobalStyles";
 import Input from "../components/atoms/Input/input";
 import Button from "../components/atoms/Button/button";
+import Link from "../components/atoms/Link/link";
 
 
 const IndexPage = () => {
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <Input name="name" type="email" label="E-mail" error=""/>
       <Input name="" type="textarea" label="Wiadomość" error="" />
       <Button text="Wyślij" type="submit" href="" />
+      <Link>Strona główna</Link>
     </main>
   )
 }

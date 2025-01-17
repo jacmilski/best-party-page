@@ -14,17 +14,17 @@ const buttonStyles = css`
 
     transition: background-color 250ms linear;
     
+
+    &:hover {
+        background-color: var(--dark-gray);
+    }
+
     &:focus-visible {
         outline-width: 1px;
         outline-style: solid;
         outline-color: var(--orange);
         outline-offset: 3px;
     }
-
-    &:hover {
-        background-color: var(--dark-gray);
-    }
-
 
     @media only screen and (min-width: 768px) {
         padding: 22px 62px;
