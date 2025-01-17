@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const inputStyle = css`
+const inputStyles = css`
     border: 2px solid var(--black);
     width: 100%;
     border-radius: 21px;
@@ -29,14 +29,14 @@ export const StyledError = styled.p`
 `;
 
 export const StyledTextArea = styled.textarea`
-    ${inputStyle}
+    ${inputStyles}
     resize: none;
     height: 296px;
     padding: 22px;
 `;
 
 export const StyledInput = styled.input`
-    ${inputStyle}
+    ${inputStyles}
     height: 50px;
     padding: 0 22px;
 `;
