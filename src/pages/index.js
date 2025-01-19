@@ -6,6 +6,7 @@ import Input from "../components/atoms/Input/input";
 import Button from "../components/atoms/Button/button";
 import Link from "../components/atoms/Link/link";
 import HamburgerButton from "../components/atoms/HamburgerButton/hamburgerButton";
+import FAQElement from "../components/atoms/FAQElement/FAQElement";
 
 
 const IndexPage = () => {
@@ -33,6 +34,7 @@ const IndexPage = () => {
         isOpen={isOpen}
         isBlack={isBlack}
       />
+      <FAQElement question="Czy to jest pytanie?" answer="To jest przeraźliwie długa odpowiedź na pytanie." />
     </main>
   )
 }
