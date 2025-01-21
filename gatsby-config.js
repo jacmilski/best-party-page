@@ -46,7 +46,7 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: `gatsby-plugin-sitemap`,
       options: {
         query: `
         {
@@ -77,8 +77,20 @@ module.exports = {
         }),
       },
     },
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 90,
+        }
+      }
+    },
+    //`gatsby-source-filesystem`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-datocms`,
       options: {
