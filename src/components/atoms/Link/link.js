@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyledLink } from './link.styles';
 
-const Link = ({ url, ariaLabel, className, children, ...props }) => (
+const Link = ({ to, ariaLabel, className, children }) => (
     <StyledLink
-        to={url}
+        to={to}
         aria-label={ariaLabel}
         className={className}
     >

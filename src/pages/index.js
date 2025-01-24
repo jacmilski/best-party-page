@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+// @ts-nocheck
+import React from "react";
 import { graphql } from "gatsby";
 import Seo from "../components/atoms/seo/seo";
-//import Input from "../components/atoms/Input/input";
-//import Button from "../components/atoms/Button/button";
-//import Link from "../components/atoms/Link/link";
-//import HamburgerButton from "../components/atoms/HamburgerButton/hamburgerButton";
-//import FAQElement from "../components/atoms/FAQElement/FAQElement";
 import HeroSection from "../components/organisms/heroSection/heroSection";
+import YourBestPartySection from "../components/molecules/yourBestPartySection/yourBestPartySection";
+import ListSection from "../components/molecules/listSection/listSection";
 
 
-const IndexPage = ({ data: { datoCmsHomePage} }) => {
+const IndexPage = ({ data: { datoCmsHomePage } }) => {
+  
+
     return (
     <main>
       <HeroSection
@@ -17,7 +17,21 @@ const IndexPage = ({ data: { datoCmsHomePage} }) => {
         description={datoCmsHomePage.mainSectionPageDescription}
         imageTitle={datoCmsHomePage.mainSectionImage.title}
         alt={datoCmsHomePage.mainSectionImage.alt}
-        heroImage={datoCmsHomePage.mainSectionImage.gatsbyImageData} />
+        heroImage={datoCmsHomePage.mainSectionImage.gatsbyImageData}
+      />
+      <YourBestPartySection
+        image={datoCmsHomePage.secondSectionImage.gatsbyImageData}
+        alt={datoCmsHomePage.secondSectionImage.alt}
+        title={datoCmsHomePage.secondSectionTitle}
+        description={datoCmsHomePage.secondSectionDescription}
+        />
+      <ListSection
+          image={datoCmsHomePage.thirdSectionImage.gatsbyImageData}
+          alt={datoCmsHomePage.thirdSectionImage.alt}
+          title={datoCmsHomePage.thirdSectionTitle}
+          list={datoCmsHomePage.list}
+          id={datoCmsHomePage.list.id}
+      />
     </main>
   )
 }
@@ -30,30 +44,31 @@ export const Head = () => (
 
 export const query = graphql`
   query HomePageQuery {
-      datoCmsHomePage(mainSectionImage: {}) {
-        mainSectionPageTitle
-        mainSectionPageDescription
-        mainSectionImage {
-          url
-          alt
-          title
-          gatsbyImageData
-        }
+    datoCmsHomePage {
+      mainSectionPageTitle
+      mainSectionPageDescription
+      mainSectionImage {
+        alt
+        title
+        gatsbyImageData
+      }
+      secondSectionTitle
+      secondSectionDescription
+      secondSectionImage {
+        gatsbyImageData
+        alt
+        title
+      }
+      thirdSectionTitle
+      thirdSectionImage {
+        gatsbyImageData
+        alt
+        title
+      }
+      list {
+        id
+        element
       }
     }
+  }
 `;
-
-{/*       <Input name="name" type="text" label="Imię" error="" />
-      <Input name="name" type="email" label="E-mail" error="" />
-      <Input name="" type="textarea" label="Wiadomość" error="" />
-      <Button text="Wyślij" type="submit" href="" />
-      <HamburgerButton
-        ariaLabel="Otwórz menu"
-        openMenu={() => {
-          setIsOpen(!isOpen);
-          setIsBlack(!isBlack);
-        }}
-        isOpen={isOpen}
-        isBlack={isBlack}
-        children={undefined} />
-      <FAQElement question="Czy to jest pytanie?" answer="To jest przeraźliwie długa odpowiedź na pytanie." /> */}
