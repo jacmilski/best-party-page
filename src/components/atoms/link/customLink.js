@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyledLink } from './link.styles';
+import { StyledLink } from './customLink.styles';
 
-const Link = ({ to, ariaLabel, className, children }) => (
+const CustomLink = ({ to, ariaLabel, className, children }) => (
     <StyledLink
         to={to}
         aria-label={ariaLabel}
@@ -12,4 +12,4 @@ const Link = ({ to, ariaLabel, className, children }) => (
 );
 
 
-export default Link;
+export default CustomLink;

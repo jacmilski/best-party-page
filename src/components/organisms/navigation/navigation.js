@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react'
-// import Link from '../../atoms/link/link';
+import CustomLink from '../../atoms/link/customLink';
 import { StyledNav } from './navigation.styles';
 import { navLabels } from './nav.labels';
 
@@ -12,12 +12,12 @@ const Navigation = ({ isOpen, isBlack }) => {
 
     return (
         <StyledNav $isOpen={isOpen} $black={isBlack}>
-            {/* <Link to="/kontakt" className={isBlackClassName}>
+            <CustomLink to={`/kontakt`} className={isBlackClassName}>
                 {navLabels.CONTACT}
-            </Link>
-            <Link to="/nasze-realizacje" className={isBlackClassName}>
+            </CustomLink>
+            <CustomLink to={`/nasze-realizacje`} className={isBlackClassName}>
                 {navLabels.REALIZATIONS}
-            </Link> */}
+            </CustomLink>
         </StyledNav>
     )
 }

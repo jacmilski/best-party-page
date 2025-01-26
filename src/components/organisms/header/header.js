@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import HamburgerButton from '../../atoms/hamburgerButton/hamburgerButton';
+import CustomHamburgerButton from '../../atoms/hamburgerButton/customHamburgerButton';
 import { useLocation } from '@reach/router';
 import { StyledHeader, StyledLogo } from './header.styles';
 import Navigation from '../navigation/navigation';
@@ -13,7 +13,7 @@ const Header = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const isOurRealizationPage = 
+    const isOurRealizationPage =
         location.pathname === '/nasze-realizacje' ||
         location.pathname.includes('/realizacja/');
 
@@ -21,20 +21,20 @@ return (
     <StyledHeader>
         <StyledLogo to={'/'}>
             <Logo
-                isBlack={isOurRealizationPage || location.pathname === '/kontakt/'} 
+                isBlack={isOurRealizationPage || location.pathname === '/kontakt/'}
             />
         </StyledLogo>
         <Navigation
             isOpen={isOpen}
             isBlack={isOurRealizationPage}
         />
-        {/* <HamburgerButton
+        <CustomHamburgerButton
             ariaLabel={undefined}
             openMenu={() => setIsOpen(!isOpen)}
             isOpen={isOpen}
             isBlack={isOurRealizationPage}
             children={undefined}
-        /> */}
+        />
     </StyledHeader>
     )
 }
