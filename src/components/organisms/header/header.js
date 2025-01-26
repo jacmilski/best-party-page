@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+// import HamburgerButton from '../../atoms/hamburgerButton/hamburgerButton';
 import { useLocation } from '@reach/router';
 import { StyledHeader, StyledLogo } from './header.styles';
 import Navigation from '../navigation/navigation';
 
 import Logo from '../../icons/logo';
-import HamburgerButton from '../../atoms/hamburgerButton/hamburgerButton';
 
 
 const Header = () => {
@@ -28,13 +28,13 @@ return (
             isOpen={isOpen}
             isBlack={isOurRealizationPage}
         />
-        <HamburgerButton
+        {/* <HamburgerButton
             ariaLabel={undefined}
             openMenu={() => setIsOpen(!isOpen)}
             isOpen={isOpen}
             isBlack={isOurRealizationPage}
             children={undefined}
-        />
+        /> */}
     </StyledHeader>
     )
 }
