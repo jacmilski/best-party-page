@@ -1,15 +1,15 @@
-// @ts-nocheck
 import React from "react";
 import { graphql } from "gatsby";
 import Seo from "../components/atoms/seo/seo";
 import HeroSection from "../components/organisms/heroSection/heroSection";
 import YourBestPartySection from "../components/molecules/yourBestPartySection/yourBestPartySection";
 import ListSection from "../components/molecules/listSection/listSection";
+import OurRealizationSection from "../components/organisms/ourRealizationSection/ourRealizationSection";
+
 
 
 const IndexPage = ({ data: { datoCmsHomePage } }) => {
   
-
     return (
     <main>
       <HeroSection
@@ -30,8 +30,8 @@ const IndexPage = ({ data: { datoCmsHomePage } }) => {
           alt={datoCmsHomePage.thirdSectionImage.alt}
           title={datoCmsHomePage.thirdSectionTitle}
           list={datoCmsHomePage.list}
-          id={datoCmsHomePage.list.id}
       />
+      <OurRealizationSection />
     </main>
   )
 }
@@ -66,8 +66,8 @@ export const query = graphql`
         title
       }
       list {
-        id
         element
+        id
       }
     }
   }

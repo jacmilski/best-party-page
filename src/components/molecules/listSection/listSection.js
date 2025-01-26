@@ -10,7 +10,7 @@ import {
 import { StyledSecondTitle } from '../../../styles/sharedStyles';
 import Circle from '../../icons/circle';
 
-const ListSection = ({ image, alt, title, list, id }) => {
+const ListSection = ({ image, alt, title, list }) => {
 
     const img = getImage(image);
 
@@ -31,9 +31,7 @@ const ListSection = ({ image, alt, title, list, id }) => {
                     {title}
                 </StyledSecondTitle>
                 <StyledList>
-                    {list.map(({element}) => (
-                        <li key={id}>{element}</li>
-                    ))}
+                    {list.map(({ element, id }) => (<li key={id}>{element}</li>))}
                 </StyledList>
             </StyledContentWrapper>
         </StyledListSection>

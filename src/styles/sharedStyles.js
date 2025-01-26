@@ -18,8 +18,8 @@ export const StyledSecondTitle = styled.h2`
 // @ts-ignore
         $mobileTextAlign }) => $mobileTextAlign ?? "left"};
     
-    @media only screen and (max-width: 768px) {
-        text-align: ${({ 
+    @media only screen and (min-width: 768px) {
+        text-align: ${({
 // @ts-ignore
         $mobileTextAlign, $desktopTextAlign }) => $desktopTextAlign
         ? $desktopTextAlign
