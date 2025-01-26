@@ -5,7 +5,7 @@ const Button = ({ text, type, href }) =>
     href ? (
         <StyledLink to={href}>{text}</StyledLink>
     ) : (
-            <StyledButton type={type}>{text}</StyledButton>
-    )
+        <StyledButton type={type}>{text}</StyledButton>
+    );
 
 export default Button;

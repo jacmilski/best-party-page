@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useLocation } from '@reach/router';
 import { StyledHeader, StyledLogo } from './header.styles';
 import Navigation from '../navigation/navigation';
-import HamburgerButton from '../../atoms/hamburgerButton/hamburgerButton';
+
 import Logo from '../../icons/logo';
+import HamburgerButton from '../../atoms/hamburgerButton/hamburgerButton';
 
 
 const Header = () => {

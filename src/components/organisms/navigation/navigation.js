@@ -1,8 +1,8 @@
 // @ts-nocheck
 import React from 'react'
 import { StyledNav } from './navigation.styles';
-import Link from '../../atoms/link/link';
 import { navLabels } from './nav.labels';
+import Link from '../../atoms/link/link';
 
 const Navigation = ({ isOpen, isBlack }) => {
 

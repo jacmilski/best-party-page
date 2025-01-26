@@ -2,8 +2,8 @@ import React from 'react';
 import {GatsbyImage, getImage} from "gatsby-plugin-image";
 import { StyledDescription, StyledTextWrapper, StyledYourBestPartySection } from './yourBestPartySection.styles';
 import { StyledImageWrapper } from './yourBestPartySection.styles';
-import Button from '../../atoms/button/button';
 import { StyledSecondTitle } from '../../../styles/sharedStyles';
+import Button from '../../atoms/button/button';
 
 const YourBestPartySection = ({ image, alt, title, description }) => {
 
@@ -24,7 +24,7 @@ const YourBestPartySection = ({ image, alt, title, description }) => {
                 <Button
                     text={'KONTAKT'}
                     type={'button'}
-                    href={'/kontakt'} 
+                    href={'/kontakt'}
                 />
             </StyledTextWrapper>
             <StyledImageWrapper>
