@@ -5,9 +5,9 @@ import {
     StyledError,
     StyledInput,
     StyledTextArea
-} from './input.styles';
+} from './customInput.styles';
 
-const Input = ({name, type, label, error}) => {
+const CustomInput = ({name, type, label, error, register}) => {
   return (
     <StyledInputWrapper>
         {label ? <StyledLabel htmlFor={name}>{label}</StyledLabel> : null}
@@ -15,9 +15,9 @@ const Input = ({name, type, label, error}) => {
             (() => {
             switch (type) {
                 case 'textarea':
-                    return <StyledTextArea id={name} name={name} />
+                    return <StyledTextArea id={name} name={name} {...register} />
                 default:
-                    return <StyledInput id={name} name={name} type={type} />;
+                    return <StyledInput id={name} name={name} type={type} {...register} />;
             }
             })()
         }
@@ -26,4 +26,4 @@ const Input = ({name, type, label, error}) => {
   )
 }
 
-export default Input;
+export default CustomInput;

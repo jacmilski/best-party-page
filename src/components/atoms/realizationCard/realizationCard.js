@@ -9,14 +9,17 @@ import {
 
 const RealizationCard = ({ image, title }) => {
 
-    const img = getImage(image);
+    const img = getImage(image.gatsbyImageData);
 
     return (
         <StyledRealizationCard>
             <StyledImageWrapper>
                 <GatsbyImage
 // @ts-ignore
-                image={img} alt={img.alt} />
+                    image={img}
+                    alt={image.alt}
+                    objectFit='fill'
+                />
             </StyledImageWrapper>
             <StyledTitleWrapper>
                 <StyledTitle>
