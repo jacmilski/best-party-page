@@ -37,7 +37,7 @@ const Contact = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        
+
     }
 
     const fields = [
@@ -67,7 +67,9 @@ const Contact = () => {
                 onSubmit={handleSubmit(onSubmit)}
                 method='POST'
                 name='kontakt'
-                data-netlify='true'
+                //data-netlify='true'
+                // @ts-ignore
+                netlify
             >
                 {fields.map(({ type, name, label }) => (
                     <CustomInput
