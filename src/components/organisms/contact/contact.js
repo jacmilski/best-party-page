@@ -35,8 +35,28 @@ const Contact = () => {
         resolver: yupResolver(formValidationSchema),
     });
 
+    const encoded = (data) => {
+        const encodedData =Object.keys(data)
+            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+
+        return encodedData;
+    }
+
     const onSubmit = (data) => {
-        console.log(data);
+        fetch('/', {
+            method: 'POST',
+            headers: {'Content-Type': 'Application/x-www-form-urlencoded'},
+            body: encoded({'form-name': 'kontakt', ...data}),
+        })
+        .then(() => {
+            setIsError(false);
+            setIsSend(true);
+            reset();
+        })
+        .catch(() => {
+            setIsError(true);
+        });
 
     }
 
@@ -69,7 +89,7 @@ const Contact = () => {
                 name='kontakt'
                 //data-netlify='true'
                 // @ts-ignore
-                netlify
+                netlify='true'
             >
                 {fields.map(({ type, name, label }) => (
                     <CustomInput
