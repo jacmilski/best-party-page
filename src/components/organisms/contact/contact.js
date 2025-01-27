@@ -35,8 +35,8 @@ const Contact = () => {
         resolver: yupResolver(formValidationSchema),
     });
 
-    const encoded = (data) => {
-        const encodedData =Object.keys(data)
+    const encode = (data) => {
+        const encodedData = Object.keys(data)
             .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
             .join('&');
 
@@ -46,13 +46,13 @@ const Contact = () => {
     const onSubmit = (data) => {
         fetch('/', {
             method: 'POST',
-            headers: {'Content-Type': 'Application/x-www-form-urlencoded'},
-            body: encoded({'form-name': 'kontakt', ...data}),
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: encode({'form-name': 'kontakt', ...data}),
         })
         .then(() => {
             setIsError(false);
             setIsSend(true);
-            reset();
+            //reset();
         })
         .catch(() => {
             setIsError(true);
@@ -87,9 +87,7 @@ const Contact = () => {
                 onSubmit={handleSubmit(onSubmit)}
                 method='POST'
                 name='kontakt'
-                //data-netlify='true'
-                // @ts-ignore
-                netlify='true'
+                data-netlify='true'
             >
                 {fields.map(({ type, name, label }) => (
                     <CustomInput
@@ -104,7 +102,7 @@ const Contact = () => {
                 ))}
                 <CustomButton
                     text={datoCmsContactSection.buttonText}
-                    type={'submit'}
+                    type='submit'
                     href={null}
                 />
             </StyledForm>
