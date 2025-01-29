@@ -5,9 +5,7 @@ import HeroSection from "../components/organisms/heroSection/heroSection";
 import YourBestPartySection from "../components/molecules/yourBestPartySection/yourBestPartySection";
 import ListSection from "../components/molecules/listSection/listSection";
 import OurRealizationSection from "../components/organisms/ourRealizationSection/ourRealizationSection";
-import Contact from "../components/organisms/contact/contact";
 import FAQContactSection from "../components/organisms/FAQcontactSection/FAQcontactSection";
-
 
 
 const IndexPage = ({ data: { datoCmsHomePage } }) => {
