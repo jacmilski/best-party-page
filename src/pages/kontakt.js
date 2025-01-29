@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import FAQContactSection from '../components/organisms/FAQcontactSection/FAQcontactSection';
 
-const Kontakt = () => {
+
+const ContactSite = () => {
   return (
-    <div>Kontakt</div>
+    // @ts-ignore
+    <FAQContactSection
+      isContactPage
+    />
   )
 }
 
-export default Kontakt;
+export default ContactSite;

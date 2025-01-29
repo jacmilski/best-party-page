@@ -15,6 +15,9 @@ export const StyledContact = styled.section`
     @media only screen and (min-width: 954px) {
         width: 50%;
         align-items: flex-end;
+        padding-top: ${({
+// @ts-ignore
+        $isContactPage}) => $isContactPage ? '148px' : 'clamp(34px, 4.444vw, 64px)'};
     }
 
     @media only screen and (min-width: 1440px) {

@@ -12,10 +12,10 @@ const Navigation = ({ isOpen, isBlack }) => {
 
     return (
         <StyledNav $isOpen={isOpen} $black={isBlack}>
-            <CustomLink to={`/kontakt`} className={isBlackClassName}>
+            <CustomLink url="/kontakt" className={isBlackClassName}>
                 {navLabels.CONTACT}
             </CustomLink>
-            <CustomLink to={`/nasze-realizacje`} className={isBlackClassName}>
+            <CustomLink url="/nasze-realizacje" className={isBlackClassName}>
                 {navLabels.REALIZATIONS}
             </CustomLink>
         </StyledNav>

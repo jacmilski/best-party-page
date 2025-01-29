@@ -9,7 +9,7 @@ import CustomButton from '../../atoms/button/customButton';
 import { formValidationSchema, messageLabels } from './contact.data';
 
 
-const Contact = () => {
+const Contact = ({ isContactPage }) => {
 
     const [isSend, setIsSend] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -52,7 +52,7 @@ const Contact = () => {
         .then(() => {
             setIsError(false);
             setIsSend(true);
-            //reset();
+            reset();
         })
         .catch(() => {
             setIsError(true);
@@ -79,7 +79,10 @@ const Contact = () => {
     ];
 
     return (
-        <StyledContact>
+        <StyledContact
+// @ts-ignore
+            $isContactPage={isContactPage}
+        >
             <StyledSecondTitle>
                 {datoCmsContactSection.contactSectionTitle}
             </StyledSecondTitle>

@@ -34,7 +34,7 @@ const IndexPage = ({ data: { datoCmsHomePage } }) => {
           list={datoCmsHomePage.list}
       />
       <OurRealizationSection />
-      <FAQContactSection />
+      <FAQContactSection isContactPage={undefined} />
     </main>
   )
 }

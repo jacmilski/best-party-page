@@ -12,12 +12,14 @@ export const focusVisibleStyles = css`
 
 export const StyledSecondTitle = styled.h2`
     font-size: clamp(32px, 2.5vw,48px);
+    
+
     ${focusVisibleStyles}
     text-align: ${
     ({
 // @ts-ignore
         $mobileTextAlign }) => $mobileTextAlign ?? "left"};
-    
+
     @media only screen and (min-width: 768px) {
         text-align: ${({
 // @ts-ignore

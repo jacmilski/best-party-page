@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--white);
     position: absolute;
     top: 0;
@@ -11,10 +11,13 @@ export const StyledNav = styled.nav`
     align-items: center;
     justify-content: center;
     gap: 44px;
-    z-index: 100;
+    z-index: 1000;
+    overflow: ${({
+// @ts-ignore
+    $isOpen }) => $isOpen ? 'hidden' : 'auto' };
     display: ${({
 // @ts-ignore
-        $isOpen, $isBlack }) => $isOpen ? 'flex' : 'none' };
+        $isOpen }) => $isOpen ? 'flex' : 'none' };
 
     @media only screen and (min-width: 768px) {
         display: flex;

@@ -15,7 +15,7 @@ const Header = () => {
 
     const isOurRealizationPage =
         location.pathname === '/nasze-realizacje' ||
-        location.pathname.includes('/realizacja/');
+        location.pathname.includes('/realizacj/');
 
 return (
     <StyledHeader>
@@ -29,11 +29,10 @@ return (
             isBlack={isOurRealizationPage}
         />
         <CustomHamburgerButton
-            ariaLabel={undefined}
+// @ts-ignore
             openMenu={() => setIsOpen(!isOpen)}
             isOpen={isOpen}
-            isBlack={isOurRealizationPage}
-            children={undefined}
+            isBlack={isOurRealizationPage || location.pathname === '/kontakt/'}
         />
     </StyledHeader>
     )
