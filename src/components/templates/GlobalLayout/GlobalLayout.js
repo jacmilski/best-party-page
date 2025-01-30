@@ -10,8 +10,8 @@ const GlobalLayout = ({ children }) => (
         <Header />
         <StyledGlobalWrapper>
             {children}
-            <Footer />
         </StyledGlobalWrapper>
+        <Footer />
     </>
 );
 

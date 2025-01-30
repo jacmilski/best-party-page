@@ -21,18 +21,26 @@ return (
     <StyledHeader>
         <StyledLogo to={'/'}>
             <Logo
-                isBlack={isOurRealizationPage || location.pathname === '/kontakt/'}
+                isBlack={isOurRealizationPage
+                    || location.pathname === '/kontakt/'
+                    || location.pathname === '/nasze-realizacje/'
+                }
             />
         </StyledLogo>
         <Navigation
             isOpen={isOpen}
-            isBlack={isOurRealizationPage}
+            isBlack={isOurRealizationPage
+                || location.pathname === '/nasze-realizacje/'
+            }
         />
         <CustomHamburgerButton
 // @ts-ignore
             openMenu={() => setIsOpen(!isOpen)}
             isOpen={isOpen}
-            isBlack={isOurRealizationPage || location.pathname === '/kontakt/'}
+            isBlack={isOurRealizationPage
+                || location.pathname === '/kontakt/'
+                || location.pathname === '/nasze-realizacje/'
+            }
         />
     </StyledHeader>
     )
