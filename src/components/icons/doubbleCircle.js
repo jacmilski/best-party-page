@@ -11,6 +11,6 @@ const DoubbleCircle = () => (
         <circle cx="-4" cy="225" r="219.5" stroke="#EDAA52" stroke-width="11" />
         <circle cx="-6" cy="226" r="155.5" stroke="#EDAA52" stroke-width="11" />
     </svg>
-)
+);
 
 export default DoubbleCircle;

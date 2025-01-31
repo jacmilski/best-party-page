@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "gatsby";
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const StyledOurRealizationsCards = styled.section`
     width: 100%;
@@ -47,7 +47,6 @@ export const StyledContentWrapper = styled.div`
     background-color: var(--cream);
     border-radius: 0 0 27px 27px;
     overflow: hidden;
-
 `;
 export const StyledTitle = styled.div`
     font-size: 20px;

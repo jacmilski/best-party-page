@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledContact = styled.section`
     width: 100%;
     padding: clamp(34px, 4.444vw, 64px) clamp(22px, 4.722vw, 68px)
-    clamp(34px, 4.444vw, 64px) clamp(22px, 2.639px, 38px);
+        clamp(34px, 4.444vw, 64px) clamp(22px, 2.639px, 38px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -16,8 +16,9 @@ export const StyledContact = styled.section`
         width: 50%;
         align-items: flex-end;
         padding-top: ${({
-// @ts-ignore
-        $isContactPage}) => $isContactPage ? '148px' : 'clamp(34px, 4.444vw, 64px)'};
+            // @ts-ignore
+            $isContactPage,
+        }) => ($isContactPage ? '148px' : 'clamp(34px, 4.444vw, 64px)')};
     }
 
     @media only screen and (min-width: 1440px) {

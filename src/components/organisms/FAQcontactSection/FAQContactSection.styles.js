@@ -3,20 +3,23 @@ import styled from 'styled-components';
 export const StyledFAQContactSection = styled.section`
     width: 100%;
     display: flex;
-    margin-top: ${({ 
-// @ts-ignore
-    $isContactPage }) => $isContactPage ? '80px' : 'clamp(54px, 10.278vw, 148px)'};
+    margin-top: ${({
+        // @ts-ignore
+        $isContactPage,
+    }) => ($isContactPage ? '80px' : 'clamp(54px, 10.278vw, 148px)')};
     position: relative;
     z-index: 1;
-    flex-direction: ${({ 
-// @ts-ignore
-    $isContactPage }) => $isContactPage ? 'column' : 'column-reverse'};
+    flex-direction: ${({
+        // @ts-ignore
+        $isContactPage,
+    }) => ($isContactPage ? 'column' : 'column-reverse')};
 
     @media only screen and (min-width: 954px) {
         flex-direction: row;
         margin-top: ${({
-// @ts-ignore
-        $isContactPage }) => $isContactPage ? '0' : 'clamp(54px, 10.278vw, 148px)'};
+            // @ts-ignore
+            $isContactPage,
+        }) => ($isContactPage ? '0' : 'clamp(54px, 10.278vw, 148px)')};
     }
 `;
 

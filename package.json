@@ -35,5 +35,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.14",
     "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2"
   }
 }

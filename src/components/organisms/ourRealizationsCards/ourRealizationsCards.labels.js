@@ -4,4 +4,4 @@ export const ourRealizationsLabels = {
     count: 'LICZBA OSÓB',
     yes: 'TAK',
     no: 'NIE',
-}
+};

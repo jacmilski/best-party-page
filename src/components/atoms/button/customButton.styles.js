@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import { Link } from "gatsby";
-import { focusVisibleStyles } from "../../../styles/sharedStyles";
+import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
+import { focusVisibleStyles } from '../../../styles/sharedStyles';
 
 const buttonStyles = css`
     background-color: var(--orange);
@@ -23,7 +23,7 @@ const buttonStyles = css`
 
     @media only screen and (min-width: 768px) {
         padding: 22px 62px;
-        max-width: 216px
+        max-width: 216px;
     }
 `;
 

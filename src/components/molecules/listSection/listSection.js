@@ -5,13 +5,12 @@ import {
     StyledList,
     StyledListSection,
     StyledContentWrapper,
-    StyledCircleWrapper
+    StyledCircleWrapper,
 } from './listSection.styles';
 import { StyledSecondTitle } from '../../../styles/sharedStyles';
 import Circle from '../../icons/circle';
 
 const ListSection = ({ image, alt, title, list }) => {
-
     const img = getImage(image);
 
     return (
@@ -21,21 +20,21 @@ const ListSection = ({ image, alt, title, list }) => {
             </StyledCircleWrapper>
             <StyledImageWrapper>
                 <GatsbyImage
-    // @ts-ignore
+                    // @ts-ignore
                     image={img}
                     alt={alt}
                 />
             </StyledImageWrapper>
             <StyledContentWrapper>
-                <StyledSecondTitle>
-                    {title}
-                </StyledSecondTitle>
+                <StyledSecondTitle>{title}</StyledSecondTitle>
                 <StyledList>
-                    {list.map(({ element, id }) => (<li key={id}>{element}</li>))}
+                    {list.map(({ element, id }) => (
+                        <li key={id}>{element}</li>
+                    ))}
                 </StyledList>
             </StyledContentWrapper>
         </StyledListSection>
-    )
-}
+    );
+};
 
 export default ListSection;

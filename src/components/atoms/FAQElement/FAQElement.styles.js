@@ -24,7 +24,6 @@ export const StyledQuestionWrapper = styled.summary`
     font-weight: 700;
     color: var(--white);
     font-size: clamp(20px, 2.222vw, 32px);
-
 `;
 export const StyledAnswerWrapper = styled.div`
     margin-top: 14px;

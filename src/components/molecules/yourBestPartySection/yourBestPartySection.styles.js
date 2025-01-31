@@ -10,9 +10,7 @@ export const StyledYourBestPartySection = styled.section`
         justify-content: flex-end;
         align-items: center;
         padding-left: 59px;
-
     }
-
 `;
 export const StyledTextWrapper = styled.div`
     display: flex;

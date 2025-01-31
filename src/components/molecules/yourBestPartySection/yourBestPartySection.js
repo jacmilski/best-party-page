@@ -1,12 +1,15 @@
 import React from 'react';
 import CustomButton from '../../atoms/button/customButton';
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
-import { StyledDescription, StyledTextWrapper, StyledYourBestPartySection } from './yourBestPartySection.styles';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import {
+    StyledDescription,
+    StyledTextWrapper,
+    StyledYourBestPartySection,
+} from './yourBestPartySection.styles';
 import { StyledImageWrapper } from './yourBestPartySection.styles';
 import { StyledSecondTitle } from '../../../styles/sharedStyles';
 
 const YourBestPartySection = ({ image, alt, title, description }) => {
-
     const img = getImage(image);
 
     return (
@@ -18,9 +21,7 @@ const YourBestPartySection = ({ image, alt, title, description }) => {
                 >
                     {title}
                 </StyledSecondTitle>
-                <StyledDescription>
-                    {description}
-                </StyledDescription>
+                <StyledDescription>{description}</StyledDescription>
                 <CustomButton
                     text={'KONTAKT'}
                     type={'button'}
@@ -29,13 +30,13 @@ const YourBestPartySection = ({ image, alt, title, description }) => {
             </StyledTextWrapper>
             <StyledImageWrapper>
                 <GatsbyImage
-// @ts-ignore
+                    // @ts-ignore
                     image={img}
                     alt={alt}
                 />
             </StyledImageWrapper>
         </StyledYourBestPartySection>
-    )
-}
+    );
+};
 
 export default YourBestPartySection;

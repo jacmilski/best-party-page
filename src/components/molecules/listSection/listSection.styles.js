@@ -10,7 +10,6 @@ export const StyledListSection = styled.section`
         margin-top: 84px;
         position: relative;
     }
-
 `;
 export const StyledImageWrapper = styled.div`
     @media only screen and (min-width: 768px) {

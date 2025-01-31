@@ -1,9 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledOurRealizationSection = styled.section`
     width: 100%;
     padding: 31px 23px;
-
 
     @media only screen and (min-width: 768px) {
         padding: 92px 60px;
@@ -13,7 +12,7 @@ export const StyledOurRealizationSection = styled.section`
 export const StyledSliderWrapper = styled.div`
     width: 100%;
     margin-top: 31px;
-    
+
     .slick-dots {
         transform: translateY(20px);
 

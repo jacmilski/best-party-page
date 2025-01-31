@@ -1,15 +1,19 @@
-import React, { useState }  from 'react';
-import { StyledAnswerWrapper, StyledFAQElement, StyledIconWrapper, StyledQuestionWrapper } from './FAQElement.styles';
+import React, { useState } from 'react';
+import {
+    StyledAnswerWrapper,
+    StyledFAQElement,
+    StyledIconWrapper,
+    StyledQuestionWrapper,
+} from './FAQElement.styles';
 import Arrow from '../../icons/arrow';
 
 const FAQElement = ({ question, answer }) => {
-
     const [isOpen, setIsOpen] = useState(false);
 
     const handleToggle = (event) => {
         event.preventDefault();
         setIsOpen(!isOpen);
-    }
+    };
 
     return (
         <StyledFAQElement
@@ -17,7 +21,8 @@ const FAQElement = ({ question, answer }) => {
             itemProp="mainEntity"
             itemType="https://schema.org/Question"
             open={isOpen}
-            onClick={handleToggle}>
+            onClick={handleToggle}
+        >
             <StyledQuestionWrapper>
                 <StyledIconWrapper>
                     <Arrow />
@@ -33,6 +38,6 @@ const FAQElement = ({ question, answer }) => {
             </StyledAnswerWrapper>
         </StyledFAQElement>
     );
-}
+};
 
 export default FAQElement;

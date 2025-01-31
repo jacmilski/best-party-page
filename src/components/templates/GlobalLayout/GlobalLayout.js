@@ -8,12 +8,9 @@ const GlobalLayout = ({ children }) => (
     <>
         <GlobalStyle />
         <Header />
-        <StyledGlobalWrapper>
-            {children}
-        </StyledGlobalWrapper>
+        <StyledGlobalWrapper>{children}</StyledGlobalWrapper>
         <Footer />
     </>
 );
-
 
 export default GlobalLayout;

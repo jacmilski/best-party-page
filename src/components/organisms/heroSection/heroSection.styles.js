@@ -44,7 +44,7 @@ export const StyledContentWrapper = styled.div`
 export const StyledTitle = styled.h1`
     font-size: clamp(36px, 5vw, 72px);
     ${textStyles}
-    `;
+`;
 export const StyledDescription = styled.p`
     font-size: clamp(16px, 1.667vw, 24px);
     ${textStyles}
